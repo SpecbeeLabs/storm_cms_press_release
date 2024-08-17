@@ -1,5 +1,8 @@
 name: Storm CMS Press Release
 description: Storm CMS Press Release
+recipes:
+  - storm_cms_content_type_base
+  - storm_cms_media
 config:
   actions:
     metatag.settings:
