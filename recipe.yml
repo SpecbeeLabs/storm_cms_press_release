@@ -1,0 +1,14 @@
+name: Storm CMS Press Release
+description: Storm CMS Press Release
+config:
+  actions:
+    metatag.settings:
+      simple_config_update:
+        entity_type_groups.node.press_release:
+          - basic
+          - advanced
+          - open_graph
+          - twitter_cards
+    workflows.workflow.editorial:
+      addNodeTypes:
+        - press_release

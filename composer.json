@@ -1,0 +1,14 @@
+{
+    "name": "specbee/storm_cms_press_release",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Malabya",
+            "email": "malabya@specbee.com"
+        }
+    ],
+    "require": {
+        "specbee/storm_cms_content_type_base": "*"
+    }
+}
