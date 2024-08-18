@@ -3,43 +3,26 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_files
+    - media.type.document
     - node.type.press_release
-  module:
-    - file
-    - filefield_paths
-third_party_settings:
-  filefield_paths:
-    enabled: true
-    file_path:
-      value: '[date:custom:Y]-[date:custom:m]'
-      options:
-        slashes: false
-        pathauto: false
-        transliterate: false
-    file_name:
-      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
-      options:
-        slashes: false
-        pathauto: false
-        transliterate: false
-    redirect: false
-    retroactive_update: false
-    active_updating: false
 id: node.press_release.field_files
 field_name: field_files
 entity_type: node
 bundle: press_release
 label: File(s)
-description: 'Upload files associated with the Press Release'
+description: ''
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:file'
-  handler_settings: {  }
-  file_directory: '[date:custom:Y]-[date:custom:m]'
-  file_extensions: 'pdf docx doc'
-  max_filesize: ''
-  description_field: false
-field_type: file
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

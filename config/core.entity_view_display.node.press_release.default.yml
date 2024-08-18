@@ -12,7 +12,6 @@ dependencies:
     - node.type.press_release
   module:
     - datetime
-    - file
     - link
     - metatag
     - text
@@ -29,6 +28,11 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_date:
     type: datetime_default
     label: hidden
@@ -39,10 +43,10 @@ content:
     weight: 1
     region: content
   field_files:
-    type: file_default
+    type: entity_reference_label
     label: above
     settings:
-      use_description_as_link_text: true
+      link: true
     third_party_settings: {  }
     weight: 7
     region: content

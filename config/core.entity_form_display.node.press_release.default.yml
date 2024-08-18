@@ -10,10 +10,10 @@ dependencies:
     - field.field.node.press_release.field_meta_tags
     - field.field.node.press_release.field_press_release_link
     - node.type.press_release
+    - workflows.workflow.editorial
   module:
     - content_moderation
     - datetime
-    - file
     - link
     - media_library
     - metatag
@@ -48,11 +48,14 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_files:
-    type: file_generic
-    weight: 4
+    type: entity_reference_autocomplete
+    weight: 6
     region: content
     settings:
-      progress_indicator: throbber
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_image:
     type: media_library_widget
@@ -63,7 +66,7 @@ content:
     third_party_settings: {  }
   field_link:
     type: link_default
-    weight: 6
+    weight: 5
     region: content
     settings:
       placeholder_url: ''
@@ -79,7 +82,7 @@ content:
     third_party_settings: {  }
   field_press_release_link:
     type: link_default
-    weight: 5
+    weight: 4
     region: content
     settings:
       placeholder_url: ''
@@ -106,12 +109,12 @@ content:
     third_party_settings: {  }
   publish_on:
     type: datetime_timestamp_no_default
-    weight: 52
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   scheduler_settings:
-    weight: 50
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
