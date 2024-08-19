@@ -4,8 +4,8 @@ dependencies:
   module:
     - media
     - node
-id: node.field_image
-field_name: field_image
+id: node.field_files
+field_name: field_files
 entity_type: node
 type: entity_reference
 settings:
